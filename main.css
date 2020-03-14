@@ -17,7 +17,7 @@ body{
     height: 100%; */
     /* background: linear-gradient(-45deg, 	#0a192f	, 	#172a45, #333f58); */
     background: #0a192f;
-    background-size: 400% 400%;
+    /* background-size: 400% 400%; */
     /* background: url(images/sitebg.jpg) no-repeat center fixed;
     background-size: cover; */
     animation: change 40s ease-in-out infinite;
@@ -73,6 +73,7 @@ img{
     margin-bottom: 10rem;
 }
 .section-heading h1{
+    letter-spacing: 0.1em;
     font-size: 3.5rem;
     color: rgba(255,255,255, .3);
     text-transform: uppercase;
@@ -125,8 +126,8 @@ header{
     position: fixed;
     top: -100vh;
     z-index:50;
-    background: linear-gradient(-45deg, 	#141514	, 	#3f3535, 	rgb(4, 22, 55), rgb(38, 48, 42));
-    /* background-color: #16162d; */
+    /* background: linear-gradient(-45deg, 	#141514	, 	#3f3535, 	rgb(4, 22, 55), rgb(38, 48, 42)); */
+    background-color: #182841;
     border-bottom-right-radius: 100%;
     border-bottom-left-radius: 100%;
     transition: all 650ms cubic-bezier(1,0,0,1);
@@ -219,10 +220,19 @@ li{
     
 }
 
+.landing-text h2 {
+    margin-right: 20%;
+    display: inline-block;
+    font-size:2.9rem;
+    letter-spacing: 0.1em;
+    
+}
+
 .landing-text h1{
     font-size:20rem;
     font-family: 'The Historia Demo', sans-serif;
-    background: linear-gradient(to top, #2ee3bb, #f421a6);
+    background: #4ccdaf;
+    /* background: linear-gradient(to top, #2ee3bb, #f421a6); */
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     padding: 1rem;
@@ -233,6 +243,7 @@ li{
 .landing-text h6{
     font-size: 2rem;
     font-weight:  400;
+    letter-spacing: 0.1em;
 }
 
 /*End header*/
@@ -254,6 +265,7 @@ li{
 .about-heading h1{
     font-size: 10rem;
     opacity: .3;
+    letter-spacing: 0.1em;
 }
 
 .about-heading h6{
@@ -372,7 +384,7 @@ li{
 .portfolio-description .cta{
     display: inline-block;
     margin-top: 2.5rem;
-    font-size:1.5rem;
+    font-size:1.9rem;
     text-transform: uppercase;
     color: #cf6679;
     transition: color 650ms;
@@ -514,7 +526,7 @@ input[type="submit"]:hover{
     width: 100%;
     height: 100%;
     border-radius: 50%;
-    background: linear-gradient(#14ffe9, #ffeb3b, #ff00e0);
+    background: linear-gradient(#64ffda, #172a45, #64ffda);
 }
  /* glowing effect    */
 .up span:nth-child(1){
@@ -538,7 +550,7 @@ input[type="submit"]:hover{
     left: 10px;
     right: 10px;
     bottom: 10px;
-    background: rgb(165, 152, 149);
+    background: #121212;
     border-radius: 100%;
 }
 /* glowing effect    */
@@ -551,6 +563,7 @@ input[type="submit"]:hover{
 
 .copyright p{
     font-size: 1.4rem;
+    letter-spacing: 0.1em;
 }
 /*End footer*/
 
@@ -593,10 +606,17 @@ input[type="submit"]:hover{
 /*Start media queries*/
 @media screen and (max-width: 768px) {
     body{
-        background: linear-gradient(-45deg, 	#127e3d	, 	#a72222, 	rgb(13, 44, 99), rgb(31, 80, 52));
-        background-size: 400% 400%;
+        
+        background: #0a192f;
         /* background: url(images/sitebg2.jpg) no-repeat center fixed;
         background-size: cover; */
+    }
+    .landing-text h2 {
+        margin-right: 25%;
+        display: inline-block;
+        font-size:1.8rem;
+        letter-spacing: 0.1em;
+        
     }
     .landing-text h1{
         font-size: 15rem;
@@ -616,15 +636,14 @@ input[type="submit"]:hover{
     } */
 
     .nav-list{
-        flex-direction: column;
+        flex-direction: column-reverse;
 
     }
     li{
-        margin:2rem 0;
+        margin: 2rem 0;
     }
-    .nav-links{
+    .nav-link{
         font-size: 4.5rem;
-        
         
     }
 
@@ -656,6 +675,10 @@ input[type="submit"]:hover{
     .timeline ul{
         margin: 0 0 0 auto;
     }
+    .timeline p{
+        font-size: 1.1rem;
+        margin: auto;
+    }
 
     .timeline .date::before{
         left: -20rem;
@@ -669,8 +692,7 @@ input[type="submit"]:hover{
 @media screen and (max-width: 600px){
 
     body{
-        background: linear-gradient(-45deg, 	#127e3d	, 	#a72222, 	rgb(13, 44, 99), rgb(31, 80, 52));
-        background-size: 400% 400%;
+        background: #0a192f;
     }
     .container{
         width: 50%;
@@ -718,7 +740,8 @@ input[type="submit"]:hover{
     }
 
     .timeline p{
-        font-size: 1.6rem;
+        font-size: 1.8rem;
+        
     }
     .timeline .date::before{
         font-size: 1.4rem;

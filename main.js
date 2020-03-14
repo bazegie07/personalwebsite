@@ -26,7 +26,7 @@ $(document).ready(function () {
         easing: 'ease',
         duration: 1800,
         // animation only does once if you set once:true
-        // once: true;
+        once: true
     });
 
 
