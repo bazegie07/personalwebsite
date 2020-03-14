@@ -12,10 +12,11 @@ html{
 }
 
 body{
-    font-family: sans-serif;
+    font-family: 'Dosis', sans-serif;
     /* width: 100%;
     height: 100%; */
-    background: linear-gradient(-45deg, 	#264a37	, 	#01131a, 	#010000, #f79595);
+    /* background: linear-gradient(-45deg, 	#0a192f	, 	#172a45, #333f58); */
+    background: #0a192f;
     background-size: 400% 400%;
     /* background: url(images/sitebg.jpg) no-repeat center fixed;
     background-size: cover; */
@@ -30,16 +31,20 @@ section{
 
 a{
     text-decoration: none;
-    color: #eee;
+    color: #27e8a7;
 }
 
 p{
     font-size: 1.8rem;
     font-weight: 300;
 }
+h6{
+    color:#27e8a7;
+}
 
 img{
     width: 100%;
+    
     
 }
 
@@ -146,7 +151,8 @@ li{
 }
 .nav-link:hover,
 .nav-link:focus{
-    background: linear-gradient(to top, #78d8c3, #c31985);
+    /* background: linear-gradient(to top, #78d8c3, #c31985); */
+    background: linear-gradient(to top, #27e8a7, #32ae85);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
@@ -174,7 +180,7 @@ li{
 }
 
 .bar{
-    background: linear-gradient(to right, #ffe838, #fd57bf);
+    background: linear-gradient(to right, #df4576, #add7ff);
     width: 100%;
     height:4px;
     border-radius: .8rem;
@@ -258,8 +264,11 @@ li{
 .profile-img{
     flex: 1;
     margin-right: 5rem;
+    -webkit-box-shadow: 0px 2px 6px 2px rgba(0, 0, 0, 0.75);
+    -webkit-filter: drop-shadow(90%);
     
 }
+
 
 .about-details{
     flex:1;
@@ -354,7 +363,7 @@ li{
 }
 
 .portfolio-description h6{
-    font-size: 1.5rem;
+    font-size: 2.4rem;
     text-transform: uppercase;
     font-weight: 300;
     opacity: 0.3;
@@ -365,7 +374,7 @@ li{
     margin-top: 2.5rem;
     font-size:1.5rem;
     text-transform: uppercase;
-    color: #3883ff;
+    color: #cf6679;
     transition: color 650ms;
 }
 
@@ -377,7 +386,7 @@ li{
 
 /*Start timeline*/
 .timeline ul{
-    border-left: 4px solid #ffe838;
+    border-left: 4px solid #b4adff;
     border-radius: .8rem;
     background-color:rgba(0,0,0,0.05);
     margin: 0 auto;
@@ -427,12 +436,12 @@ li{
 
 .timeline .date::after{
     content:'';
-    box-shadow: 0 0 0 4px #fd57bf;
+    box-shadow: 0 0 0 4px #40556c;
     border-radius: 100%;
     left: -8rem;
     height: 1.5rem;
     width: 1.5rem;
-    background-color: #313534;
+    background-color: #ee75a0;
 }
 /*End timeline*/
 
@@ -461,7 +470,7 @@ textarea{
 
 input[type="submit"]{
     width: initial;
-    background-color:#fd57bf;
+    background-color:#cf6679;;
     color:#eee;
     padding:1rem 2rem;
     border-radius: .8rem;
@@ -471,7 +480,7 @@ input[type="submit"]{
 
 input[type="submit"]:hover{
     color: #221e3f;
-    background-color: #ffe838;
+    background-color: #27e8a7;
 }
 
 /*End contact*/
@@ -490,7 +499,7 @@ input[type="submit"]:hover{
     width: 5rem;
     height: 5rem;
     /* background-color: #eee; */
-    background: linear-gradient(#14ffe9, #ffeb3b, #ff00e0);
+    background: linear-gradient(#add7ff, #df4576, #27e8a7);
     top: -2.5rem;
     right:5rem;
     border-radius: 100%;
@@ -529,13 +538,13 @@ input[type="submit"]:hover{
     left: 10px;
     right: 10px;
     bottom: 10px;
-    background: rgb(121, 97, 93);
-    border-radius: 50%;
+    background: rgb(165, 152, 149);
+    border-radius: 100%;
 }
 /* glowing effect    */
 .up i{
-    z-index: -1;
-    color: #16162d;
+    z-index: 50000;
+    color: #27e8a7;
     font-size: 2rem;
     margin:auto;
 }
