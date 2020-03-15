@@ -7,12 +7,12 @@
 
 html{
     font-size:10px;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'sf mono','Roboto', sans-serif;
     color: #eee;
 }
 
 body{
-    font-family: 'Dosis', sans-serif;
+    font-family: 'sf mono';
     /* width: 100%;
     height: 100%; */
     /* background: linear-gradient(-45deg, 	#0a192f	, 	#172a45, #333f58); */
@@ -23,6 +23,10 @@ body{
     animation: change 40s ease-in-out infinite;
     /* background: linear-gradient(-45deg, #EE7752, #E73C7E, #23A6D5, #23D5AB); */
     
+}
+
+span{
+    color: #a8b2d1;
 }
 
 section{
@@ -45,8 +49,8 @@ h6{
 img{
     width: 100%;
     
-    
 }
+
 
 @font-face {
     font-family: 'The Historia Demo';
@@ -146,7 +150,7 @@ li{
     margin: 0 2rem;
 }
 .nav-link{
-    font-family: 'The Historia Demo', sans-serif;
+    font-family: 'sf mono','Roboto', sans-serif;
     font-size: 5rem;
     padding: 1rem;
 }
@@ -229,21 +233,24 @@ li{
 }
 
 .landing-text h1{
-    font-size:20rem;
-    font-family: 'The Historia Demo', sans-serif;
-    background: #4ccdaf;
+    justify-content: center;
+    font-size:8rem;
+    font-family: 'sf mono','Roboto', sans-serif;
+    /* font-family: 'The Historia Demo', sans-serif; */
+    background: #a8b2d1;
     /* background: linear-gradient(to top, #2ee3bb, #f421a6); */
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    padding-right: 40rem;
     padding: 1rem;
     user-select: none;
     
 }
 
 .landing-text h6{
-    font-size: 2rem;
+    font-size: 7rem;
     font-weight:  400;
-    letter-spacing: 0.1em;
+    
 }
 
 /*End header*/
@@ -276,10 +283,39 @@ li{
 .profile-img{
     flex: 1;
     margin-right: 5rem;
-    -webkit-box-shadow: 0px 2px 6px 2px rgba(0, 0, 0, 0.75);
-    -webkit-filter: drop-shadow(90%);
+    position: relative;
+    overflow: hidden;
     
 }
+
+.profile-img::after{
+    content: '';
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-color: #27e8a7;
+    position: absolute;
+    top:0;
+    left: 0;
+    opacity: .1;
+    mix-blend-mode: screen;
+    z-index: 3;
+}
+
+.profile-img:hover {
+    background: url("images/me.png") no-repeat;
+}
+
+
+
+
+
+
+
+
+/* .me{
+    color: #27e8a7;
+} */
 
 
 .about-details{
@@ -619,7 +655,7 @@ input[type="submit"]:hover{
         
     }
     .landing-text h1{
-        font-size: 15rem;
+        font-size: 6rem;
     }
     /* .top-nav{
     height: 100vh;
@@ -704,7 +740,7 @@ input[type="submit"]:hover{
     }
 
     .landing-text h1{
-        font-size: 8rem;
+        font-size: 6rem;
     }
 
     .landing-text h6{
