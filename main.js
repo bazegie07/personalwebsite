@@ -1,16 +1,26 @@
 $(document).ready(function () {
 
+    const navSLide = () => {
+        const burger = document.querySelector('.burger');
+        const nav = document.querySelector('.nav-lists');
+
+        burger.addEventListener('click',() =>{
+            nav.classList.toggle('nav-activate');
+        });
+    }
+
+    navSLide();
     // burg menu animation
-    $('.menu-toggler').on('click', function(){
-        $(this).toggleClass('open');
-        $('.top-nav').toggleClass('open');
-    });
+    // $('.menu-toggler').on('click', function(){
+    //     $(this).toggleClass('open');
+    //     $('.top-nav').toggleClass('open');
+    // });
 
         // will close the link when you click list nav
-    $('.top-nav .nav-link').on('click', function(){
-        $('.menu-toggler').removeClass('open');
-        $('.top-nav').removeClass('open');
-    });
+    // $('.top-nav .nav-link').on('click', function(){
+    //     $('.menu-toggler').removeClass('open');
+    //     $('.top-nav').removeClass('open');
+    // });
     //when you click any nav it will go to the page
     $('nav a[href*="#"]').on('click', function(){
         $('html, body').animate({
@@ -21,6 +31,14 @@ $(document).ready(function () {
     $('#up').on('click', function(){
         $('html, body').animate({scrollTop: 0}, 2000);
     });
+
+
+
+
+
+   
+
+
 
     AOS.init({
         easing: 'ease',
@@ -48,5 +66,7 @@ $(document).ready(function () {
 
 
 });
+
+
 
 

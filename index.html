@@ -9,22 +9,36 @@
     <link rel="stylesheet" href="main.css">
     <link href="https://fonts.googleapis.com/css?family=Source+Serif+Pro&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Caladea|Dosis&display=swap" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <script type="text/javascript">
+        var prevScrollpos = window.pageYOffset;
+        window.onscroll = function() {
+        
+            var currentScrollpos = window.pageYOffset;
+            if(prevScrollpos > currentScrollpos) {
+                document.getElementById("nav-lists").style.top = "0";
+                document.getElementById("nav-lists").style.background="#0a192f";
+            }else{
+                document.getElementById("nav-lists").style.top = "-200px";
+                
+            }
+            prevScrollpos = currentScrollpos;
+        }
+
+       
+    </script>
 </head>
 <body>
     <header>
-        <div class="menu-toggler">
-                <div class="bar half start"></div>
-                <div class="bar"></div>
-                <div class="bar half end"></div>
-        </div>
+        
         <nav class="top-nav">
-            <ul class="nav-list">
+            <ul   id="nav-lists" data-aos="fade-down" data-aos-delay="300">
 
                 <li>
-                    <a href="#about" class="nav-link"><span>01.</span>About</a>
+                    <a href="#about" class="nav-link"><span class="span">01.</span>About</a>
                 </li>
                 <li>
-                    <a href="images/Resume.pdf" class="nav-link"><span>02.</span>Resume</a>
+                    <a href="#contact" class="nav-link"><span>02.</span>Contact</a>
                 </li>
                 <li>
                     <a href="#portfolio" class="nav-link"><span>03.</span>Portfolio</a>
@@ -32,14 +46,25 @@
                 <li>
                     <a href="#experience" class="nav-link"><span>04.</span>Experience</a>
                 </li>
-                <li>
-                    <a href="#contact" class="nav-link"><span>05.</span>Contact</a>
+                <li></li>
+                    <a href="images/newResume.pdf" class="nav-link">Resume</a>
                 </li>
             </ul>
+            <div class="burger">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+        </div>
+        <div class="side"  >
+            <div class="email-wrapper">
+                <a href="mailto:bazegie_07@yahoo.com" class="email" data-aos="fade-right">bazegie_07@yahoo.com</a>
+            </div>
+        </div>
         </nav>
+        
         <div class="landing-text ">
-            <h2 data-aos="fade-right">Hi, my name is</h2>
-            <h1 data-aos="fade-left">Stephen Belisario</h1>
+            <h2 data-aos="fade-right" data-aos-delay="300">Hi, my name is</h2>
+            <h1 data-aos="fade-left" data-aos-delay="300">Stephen Belisario</h1>
             <h6 id="demo"></h6>
         </div>
     </header>
@@ -253,6 +278,12 @@
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script src="main.js"></script>
     
+    
+
+
+    
+        
+        
 </body>
 
 

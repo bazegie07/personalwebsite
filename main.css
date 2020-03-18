@@ -7,12 +7,16 @@
 
 html{
     font-size:10px;
-    font-family: 'sf mono','Roboto', sans-serif;
+    font-family: 'SF Mono Regular', "SF Mono", 'roboto',"SFMono-Regular", monospace ;
     color: #eee;
 }
 
+.mono-class {
+    font-family: "SFMono-Regular", monospace;
+  }
+
 body{
-    font-family:"Calibre","sf mono";
+    font-family: 'SF Mono Regular', "SF Mono", 'roboto',"SFMono-Regular", monospace ;
     /* width: 100%;
     height: 100%; */
     /* background: linear-gradient(-45deg, 	#0a192f	, 	#172a45, #333f58); */
@@ -27,6 +31,7 @@ body{
 
 span{
     color: #a8b2d1;
+    margin-right: 1rem;
 }
 
 
@@ -54,9 +59,14 @@ img{
     
 }
 
-
 @font-face {
-    font-family: "Calibre Regular", "SF Mono" ,'The Historia Demo';
+    font-family: 'SF Mono Regular';
+    font-style: normal;
+    font-weight: normal;
+    src: local('SF Mono Regular'), url('SFMonoRegular.woff') format('woff');
+}
+@font-face {
+    font-family: 'SF Mono Regular', "SF Mono" ;
     src: url('fonts/thehistoriademo-webfont.woff2') format('woff2'),
         url('fonts/thehistoriademo-webfont.woff') format('woff'),
         url("fonts/Calibre-Regular.woff") format('woff'),
@@ -132,7 +142,7 @@ header{
     height: 100vh; /* height:130vh; */
     
 }
-.top-nav{
+/* .top-nav{
     width:100%;
     height: 100vh;
     position: fixed;
@@ -143,7 +153,83 @@ header{
     border-bottom-right-radius: 100%;
     border-bottom-left-radius: 100%;
     transition: all 650ms cubic-bezier(1,0,0,1);
+} */
+
+/* .top-nav{
+    top: -10px;
+    display: flex;
+    top: 0;
+    left: 0;
+    width: 100%;
+    min-height: 5vh;
+    align-items: center;
+    box-sizing: border-box;
+    transition: .5s;
+    justify-content: space-around;
+} */
+
+.side {
+    
+    width: 40px;
+    
+    bottom: 0px;
+    
+    right: 90px;
+    z-index: 10;
+    
 }
+
+.email-wrapper{
+    margin-right:  100px;
+    display: flex;
+    flex-direction: column;
+    -webkit-box-align: center;
+    align-items: center;
+    position: absolute;
+    bottom: 0px;
+    padding: 0;
+}
+
+/* .email-wrapper::after {
+    
+    content: "";
+    display: block;
+    width: 1px;
+    height: 90px;
+   
+    margin: 0px
+} */
+
+.email {
+    position: fixed;
+    margin-right:  100px;
+    font-family: "SF Mono", "Fira Code", "Fira Mono", "Roboto Mono", "Lucida Console", Monaco, monospace;
+    font-size: 15px;
+    letter-spacing: 0.1em;
+    -webkit-writing-mode: vertical-rl;
+    writing-mode: vertical-rl;
+    margin: 30px auto;
+    /* padding: 10px; */
+    margin-left: 30px;
+    bottom: 0;
+}
+
+.email:hover{
+    color: #c31985;
+}
+
+
+
+
+
+
+
+/* .nav-lists.black{
+    background: rgb(42, 114, 173);
+    height: 80px;
+    padding-left: 100%;
+   
+} */
 
 .nav-list{
     width:100%;
@@ -152,15 +238,35 @@ header{
     display: flex;
     justify-content: center;
     align-items: center;
+    
+}
+
+#nav-lists{
+    position: fixed;
+    top:0;
+    /* right: 10px; */
+    padding: 0;
+    display: block;
+    transition: .5s;
+    z-index: 6000;
+    width: 100%;
+    
+
 }
 
 li{
     margin: 0 2rem;
+    list-style: none;
 }
 .nav-link{
-    font-family: 'sf mono','Roboto', sans-serif;
-    font-size: 5rem;
-    padding: 1rem;
+    float: left;
+    line-height: 80px;
+    font-family: 'SF Mono Regular', "SF Mono", 'roboto',"SFMono-Regular", monospace ;
+    font-size: 2rem;
+    padding: 2rem ;
+    display: block;
+    font-weight: 300;
+    
 }
 
 .nav-link:hover,
@@ -172,12 +278,24 @@ li{
     
 }
 
+.burger{
+    display: none;
+}
 
-.top-nav.open{
+.burger div{
+    width: 25px;
+    height: 3px;
+    background-color: #27e8a7;
+    margin: 5px;
+    ;
+}
+
+
+/* .top-nav.open{
     top: 0;
     border-radius: initial;
-}
-.menu-toggler{
+} */
+/* .menu-toggler{
     position: absolute;
     top: 5rem;
     right: 5rem;
@@ -189,39 +307,39 @@ li{
     cursor: pointer;
     z-index: 1500;
     transition: transform 650ms ease-out;
-}
+} */
 
-.menu-toggler.open{
+/* .menu-toggler.open{
     transform: rotate(-45deg);
-}
+} */
 
-.bar{
+/* .bar{
     background: linear-gradient(to right, #27e8a7, #add7ff);
     width: 100%;
     height:4px;
     border-radius: .8rem;
-}
-.bar.half{
+} */
+/* .bar.half{
     width: 50%;
-}
+} */
 
-.bar.start{
+/* .bar.start{
     transform-origin: right;
     transition: transform 650ms cubic-bezier(0.54, -0.81, 0.57, 0.57);
-}
+} */
 
-.open .bar.start{
+/* .open .bar.start{
     transform: rotate(-450deg) translateX(.8rem);
-}
+} */
 
-.bar.end{
+/* .bar.end{
     align-self: flex-end;
     transform-origin: left;
     transition: transform 650ms cubic-bezier(0.54, -0.81, 0.57, 0.57);
-}
-.open .bar.end{
+} */
+/* .open .bar.end{
     transform: rotate(-450deg) translateX(-.8rem);
-}
+} */
 
 .landing-text{
     position: absolute;
@@ -411,6 +529,12 @@ li{
     width: 50rem;
     flex: 1;
 }
+
+/* .portfolio-img:hover{
+    color: #27e8a7;
+    opacity: 0.3;
+} */
+
 .portfolio-description{
     /* flex: 1; */
 }
@@ -477,6 +601,7 @@ li{
     padding-bottom: 0;
     margin-bottom: 0;
     border: none;
+    
 }
 
 .timeline .date::before,
@@ -656,30 +781,77 @@ input[type="submit"]:hover{
 /*End animations*/
 
 /*Start media queries*/
+
+
+
 @media screen and (max-width: 768px) {
     body{
-        
+        overflow-x: hidden;
         background: #0a192f;
         /* background: url(images/sitebg2.jpg) no-repeat center fixed;
         background-size: cover; */
     }
+    /* #nav-lists{
+        
+        position: absolute;
+        right: 0;
+        height: 92vh;
+        top: 8vh;
+        background-color: #3a0000;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 30%;
+        transform: translateX(100%);
+        transition: transform 0.5s ease-in;
+    } */
+
+    .email{
+        position: absolute;
+    }
+
+    #nav-lists{
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        position: fixed;
+        top:0;
+        /* right: 10px; */
+        padding: 0;
+        display: block;
+        transition: .5s;
+        z-index: 6000;
+        width:100%;
+        
+    
+    }
+ 
+
+    .nav-link{
+        
+        opacity: 1;
+        font-size: 1.4rem;
+        margin: 0;
+
+    }
+    
+
+ 
     .landing-text h2 {
-        margin-right: 25%;
+        margin-right: 2px;
         display: inline-block;
         font-size:1.8rem;
         letter-spacing: 0.1em;
         
     }
     .landing-text h1{
-        font-size: 6rem;
+        font-size: 8rem;
+        
     }
     /* .top-nav{
     height: 100vh;
     position: fixed;
     } */
-    .landing-text h6{
-        font-size: 1.7rem;
-    }
     /* .section{
         width: 100%;
     }
@@ -687,17 +859,7 @@ input[type="submit"]:hover{
         width: 100%;
     } */
 
-    .nav-list{
-        flex-direction: column-reverse;
-
-    }
-    li{
-        margin: 2rem 0;
-    }
-    .nav-link{
-        font-size: 4.5rem;
-        
-    }
+    
 
     .about-heading h1{
         font-size: 8rem;
@@ -744,23 +906,46 @@ input[type="submit"]:hover{
 @media screen and (max-width: 600px){
 
     body{
+        overflow-x: hidden;
         background: #0a192f;
     }
+
+
+
+
+
+    #nav-lists{
+        display: none;
+    }
+
+
+
+    .landing-text h2 {
+        margin-right: 2px;
+        display: inline-block;
+        font-size:1.8rem;
+        letter-spacing: 0.1em;
+        
+    }
+    .landing-text h1{
+        font-size: 2rem;
+        
+    }
+
+
     .container{
-        width: 50%;
+        width: 60%;
     }
 
     .timeline ul{
         padding-right: 15rem;
     }
 
-    .menu-toggler{
-        top: 2rem;
-        right: 2rem;
-    }
+    
 
     .landing-text h1{
         font-size: 6rem;
+        padding-left:30px;
     }
 
     .landing-text h6{
@@ -769,9 +954,7 @@ input[type="submit"]:hover{
 
     
 
-    .nav-link{
-        font-size: 3.5rem;
-    }
+    
 
     .about .container{
         flex-direction: column;
@@ -800,9 +983,14 @@ input[type="submit"]:hover{
         
     }
     .timeline .date::before{
-        font-size: 1.4rem;
-
+        
+        left: -2px;
+        text-align: right;
+        min-width: 12rem;
+        font-size: 1.5rem;
+        
     }
+    
     form{
         width: 100%;
     }
