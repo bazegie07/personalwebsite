@@ -34,9 +34,38 @@ $(document).ready(function () {
 
 
 
+    var prevScrollpos = window.pageYOffset;
+    window.onscroll = function() {
+    
+        var currentScrollpos = window.pageYOffset;
+        if(prevScrollpos > currentScrollpos) {
+            document.getElementById("nav-lists").style.top = "0";
+            document.getElementById("nav-lists").style.background="#0a192f";
+            
+        }else{
+            document.getElementById("nav-lists").style.top = "-200px";
+            
+        }
+        prevScrollpos = currentScrollpos;
+    }
+
+//  start ---Simple parallax-----------//
+    var image = document.getElementsByClassName('ione');
+        new simpleParallax(image, {
+            scale: 1.6,
+            orientation: 'left'
+        });
+
+        var image = document.getElementsByClassName('parallax');
+        new simpleParallax(image, {
+            scale: 1.6,
+            
+        });
+
+        
 
 
-   
+//  end ---Simple parallax-----------//
 
 
 
