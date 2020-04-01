@@ -92,6 +92,20 @@ $(document).ready(function () {
     typeWriter();
 
 
+    
+    
+    $(function(){
+        setTimeout(function(){
+        $('html, body')
+        .main({
+            'overflow': 'auto'
+        })
+          .animate({
+            scrollTop: $('.temp').offset().top
+          }, 2000);
+        }, 2000);
+      });
+
 
 
 });
