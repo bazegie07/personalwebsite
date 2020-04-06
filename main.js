@@ -106,7 +106,7 @@ $(document).ready(function () {
         }, 2000);
       });
 
-
+      new WOW().init();
 
 });
 
