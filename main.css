@@ -153,6 +153,7 @@ section{
 a{
     text-decoration: none;
     color: #27e8a7;
+     
 }
 
 p{
@@ -1121,9 +1122,10 @@ figure.effect-apollo:hover p {
 .portfolio-description .cta{
     display: inline-block;
     margin-top: 2.5rem;
+    margin-right: 2rem;
     font-size:1.9rem;
-    text-transform: uppercase;
-    color: #cf6679;
+    
+    color: #3a9197;
     transition: color 650ms;
 }
 
