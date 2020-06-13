@@ -1,3 +1,37 @@
+/* start of Scroll Progress */
+h3 {
+    position: absolute;
+    font-family: Helvetica;
+    font-size:15px;
+    font-weight: lighter;
+    color: rgba(67, 171, 117, 0.516) !important;
+    margin: 20px;
+}
+
+.percent {
+    position: fixed;
+    display: flex;
+    top: 50%;
+    transform: translateY(-40%);
+    right: 60px;
+    flex-direction: column;
+    background: rgba(255, 255, 255, 0.2);
+    height: 140px;
+    width: 2px;
+    z-index: 5000;
+
+}
+
+.fill {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background: rgb(62, 140, 128);
+    transition: background 0.15s ease;
+}
+
+
 .grid {
 	position: relative;
 	clear: both;
