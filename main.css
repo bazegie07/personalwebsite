@@ -12,7 +12,7 @@ h3 {
     position: fixed;
     display: flex;
     top: 50%;
-    transform: translateY(-40%);
+    transform: translateY(-40%);1
     right: 60px;
     flex-direction: column;
     background: rgba(255, 255, 255, 0.2);
@@ -161,7 +161,7 @@ body{
     --gradient-color3: linear-gradient(to right bottom, rgba(100, 63, 106, 0.571), rgba(27, 69, 59, 0.8));
 }
 
-@-webkit-keyframes pop-in{
+/* @-webkit-keyframes pop-in{
     0% {
       background: url('images/20.jpg') center no-repeat;
       background-size: cover;
@@ -175,7 +175,7 @@ body{
       background: url('images/me.png') center no-repeat ;
       background-size: cover;
     }
-  }
+  } */
 
 
 
@@ -248,8 +248,8 @@ img{
     position: absolute;
     top: 0;
     left: 0;
-    background: url("/images/sushi-uhd-4k-wallpaper.jpg") center no-repeat ;
-    background-size: cover;
+    /* background: url("/images/sushi-uhd-4k-wallpaper.jpg") center no-repeat ; */
+    /* background-size: cover; */
     z-index: -1;
     transition: transform 5s;
 }
